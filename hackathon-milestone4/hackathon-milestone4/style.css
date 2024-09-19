@@ -1,0 +1,175 @@
+body { 
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    padding: 0;
+    background-color: rgb(240, 240, 255);
+}
+h1 {
+    text-align: center;
+    color: #2c3e50; 
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+fieldset {
+    border: 2px solid #3498bd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+legend {
+    font-weight: bold;
+    color: #2c3e50;
+}
+label {
+    display: block;
+    margin-top: 10px;
+    color: #2c3e50;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #3498bd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(46, 217, 239);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+button:hover {
+    background-color: #66b1e6;
+}
+#resumeOutput {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #3498bd;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#resumeOutput h2 {
+    color: #2c3e50;
+}*/
+
+
+
+body { 
+    font-family: 'Poppins', sans-serif; /* More modern and clean font */
+    margin: 20px;
+    padding: 0;
+    background-color: rgb(255, 245, 240); /* Soft peach background for warmth */
+}
+h1 {
+    text-align: center;
+    color: #4a4a4a;  /* Dark neutral gray for a professional look */
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fffbf0; /* Very light yellow for warmth */
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    padding: 30px;
+}
+
+fieldset {
+    border: 2px solid #ff6b6b; /* Coral red border for a pop of color */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+legend {
+    font-weight: bold;
+    color: #4a4a4a; /* Neutral dark gray */
+}
+label {
+    display: block;
+    margin-top: 10px;
+    color: #ff6b6b;  /* Coral red for label text */
+    font-weight: bold;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ff6b6b; /* Matching coral red for inputs */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff7e6; /* Soft peach background for inputs */
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8a65; /* Warm orange button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+button:hover {
+    background-color: #ff7043; /* Slightly darker orange on hover */
+}
+
+#resumeOutput {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 2px solid #3498db; /* Cool blue border */
+    border-radius: 12px;
+    background-color: #e0f7fa; /* Soft teal for a refreshing feel */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+#resumeOutput h2 {
+    color: #34495e; /* Dark blue-gray for headings */
+}
+
+/* Editable input styles */
+.editing-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #f39c12; /* Vibrant orange for editing */
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #ffeb99; /* Light yellow background in edit mode */
+}
+
+/* For the editable spans */
+.editable {
+    cursor: pointer;
+    color: #3498db; /* Cool blue for editable fields */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+.editable:hover {
+    color: #ff7043; /* Change to vibrant orange when hovered */
+}
+
+
+
+
