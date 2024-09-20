@@ -1,7 +1,8 @@
-document.getElementById('resumeForm')?.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form from submitting
+// Add event listener for form submission
+document.getElementById('resumeForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form submission
 
-    // Get form data
+    // Retrieve the form data
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
@@ -9,8 +10,8 @@ document.getElementById('resumeForm')?.addEventListener('submit', function (e) {
     const experience = document.getElementById('experience').value;
     const skills = document.getElementById('skills').value;
 
-    // Generate resume output
-    const resumeOutput = `
+    // Generate the resume HTML
+    const resumeHtml = `
         <h2>${name}'s Resume</h2>
         <p><strong>Email:</strong> <span id="edit-email" class="editable">${email}</span></p>
         <p><strong>Phone:</strong> <span id="edit-phone" class="editable">${phone}</span></p>
@@ -25,39 +26,42 @@ document.getElementById('resumeForm')?.addEventListener('submit', function (e) {
         <p id="edit-skills" class="editable">${skills}</p>
     `;
 
-    // Display generated resume
-    const outputElement = document.getElementById('resumeOutput');
-    if (outputElement) {
-        outputElement.innerHTML = resumeOutput;
-        makeEditable(); // Make resume editable
-    }
+    // Insert the generated resume into the output div
+    document.getElementById('resumeOutput').innerHTML = resumeHtml;
+
+    // Call function to make the fields editable
+    makeFieldsEditable();
 });
 
-function makeEditable() {
+// Function to make fields editable when clicked
+function makeFieldsEditable() {
     const editableElements = document.querySelectorAll('.editable');
+
     editableElements.forEach(function (element) {
         element.addEventListener('click', function () {
             const currentElement = element;
             const currentValue = currentElement.textContent || "";
 
-            // Replace content with input field
+            // If the element clicked is a paragraph or span, replace it with an input field
             if (currentElement.tagName === "P" || currentElement.tagName === 'SPAN') {
                 const input = document.createElement('input');
                 input.type = 'text';
                 input.value = currentValue;
                 input.classList.add('editing-input');
 
-                // On blur, update the content and remove the input field
+                // Handle input field losing focus (blur event)
                 input.addEventListener('blur', function () {
                     currentElement.textContent = input.value;
                     currentElement.style.display = 'inline';
-                    input.remove();
+                    input.remove(); // Remove input field after editing
                 });
 
+                // Replace the current element content with input field
                 currentElement.style.display = 'none';
-                currentElement.parentNode?.insertBefore(input, currentElement);
-                input.focus();
+                currentElement.parentNode.insertBefore(input, currentElement);
+                input.focus(); // Automatically focus the input field for user editing
             }
         });
     });
 }
+
